@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Utility Classes */
+.hidden {
+  display: none !important;
+}
+
+.active {
+  background-color: rgb(255, 235, 205) !important;
+}
+
+.disabled {
+  border: 1px solid #999999 !important;
+  background-color: #cccccc !important;
+  color: #666666 !important;
+}
+
+/*Element Class*/
+
+.board {
+  width: 50rem;
+  height: 75%;
+  display: flex;
+  position: relative;
+}
+
+.midControl {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.midControl > button {
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.midControl > button:active {
+  transform: translateY(0.25em);
+}
+
+.playerCard {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#player1 {
+  border-radius: 10px 0 0 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#player2 {
+  border-radius: 0 10px 10px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.playerCard > * {
+  flex-grow: 1;
+}
+
+.scoreCard {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.playerScore {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.currScoreCard {
+  padding: 0.7rem;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  background-color: rgb(243, 186, 100);
+  border-radius: 8px;
+}
+
+.currentScore {
+  margin-top: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.diceContainer {
+  width: 50px;
+  height: 50px;
+}
+
+.dice {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #f0f8ff;
+  transform: translate(calc(10px * var(--x)), calc(10px * var(--y)));
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  height: 15rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  word-spacing: 0.2rem;
+  z-index: 5;
+}

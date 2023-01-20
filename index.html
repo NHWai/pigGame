@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <div class="board">
+      <div id="player1" class="playerCard active">
+        <div class="scoreCard">
+          <h2>PLAYER 1</h2>
+          <div class="playerScore">0</div>
+        </div>
+        <div>
+          <div class="currScoreCard">
+            <div>CURRENT</div>
+            <div class="currentScore">0</div>
+          </div>
+        </div>
+      </div>
+      <div id="player2" class="playerCard">
+        <div class="scoreCard">
+          <h2>PLAYER 2</h2>
+          <div class="playerScore">0</div>
+        </div>
+        <div>
+          <div class="currScoreCard">
+            <div>CURRENT</div>
+            <div class="currentScore">0</div>
+          </div>
+        </div>
+      </div>
+      <div class="midControl">
+        <button class="newgame">NEW GAME</button>
+        <div class="diceContainer">
+          <div id="dice1" class="dice hidden">
+            <span style="--x: 0; --y: 0"></span>
+          </div>
+          <div id="dice2" class="dice hidden">
+            <span style="--x: -1; --y: 0"></span>
+            <span style="--x: 1; --y: 0"></span>
+          </div>
+          <div id="dice3" class="dice hidden">
+            <span style="--x: -1; --y: 0"></span>
+            <span style="--x: 0; --y: 0"></span>
+            <span style="--x: 1; --y: 0"></span>
+          </div>
+          <div id="dice4" class="dice hidden">
+            <span style="--x: -1; --y: 1"></span>
+            <span style="--x: 1; --y: 1"></span>
+            <span style="--x: -1; --y: -1"></span>
+            <span style="--x: 1; --y: -1"></span>
+          </div>
+          <div id="dice5" class="dice hidden">
+            <span style="--x: -1; --y: 1"></span>
+            <span style="--x: 1; --y: 1"></span>
+            <span style="--x: 0; --y: 0"></span>
+            <span style="--x: -1; --y: -1"></span>
+            <span style="--x: 1; --y: -1"></span>
+          </div>
+          <div id="dice6" class="dice hidden">
+            <span style="--x: -1; --y: 1"></span>
+            <span style="--x: 1; --y: 1"></span>
+            <span style="--x: -1; --y: 0"></span>
+            <span style="--x: 1; --y: 0"></span>
+            <span style="--x: -1; --y: -1"></span>
+            <span style="--x: 1; --y: -1"></span>
+          </div>
+        </div>
+        <button class="rolldice">ROLL DICE</button>
+        <button class="hold">HOLD</button>
+      </div>
+    </div>
+
+    <div class="overlay hidden"></div>
+    <div class="modalBox hidden">Player 1 wins</div>
+    <script src="script.js"></script>
+  </body>
+</html>
